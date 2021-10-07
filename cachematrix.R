@@ -3,9 +3,11 @@
 
 ## Write a short comment describing this function
 
+### make matrix
+
 makeCacheMatrix <- function(x = matrix()) {
   inv<-NULL
-  set<-function(y){
+  set<-function(y){ ##set matrix
     x<<-y
     inv<<-NULL
   }
@@ -18,9 +20,11 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## Write a short comment describing this function
 
+### try to get cache for inversion of matrix
+
 cacheSolve <- function(x, ...) {
   inv<-x$getinv()
-  if(!is.null(inv)) {
+  if(!is.null(inv)) { ## in case inversion already calculate
     message("getting cached data")
     return(inv)
   }
